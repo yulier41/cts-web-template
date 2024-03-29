@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------
+	Real Estate City Properties
+-----------------------------------------------------------------*/
+
+.real-estate-properties [class^=col-] > a {
+	display: block;
+	height: 875px;
+	background-color: #EEE;
+}
+@media (max-resolution: 125dpi) and (min-resolution: 120dpi) {
+	.real-estate-properties [class^=col-] > a {
+	  height: 700px;
+	}
+  }
+  @media (max-resolution: 150dpi) and (min-resolution: 140dpi) {
+	.real-estate-properties [class^=col-] > a {
+	  height: 508px;
+	}
+  }
+  
+.real-estate-properties [class^=col-] img { display: block; }
+
+.real-estate-properties [class^=col-] > a::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	opacity: 0.3;
+	-webkit-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+}
+
+.real-estate-properties [class^=col-] > a:hover::before { opacity: 1; }
